@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<bean id="person" class="com.stackroute.aware_interface_demo.Person" scope="prototype">
+		<property name="personId" value="P001"></property>
+		<property name="personName" value="Helen"></property>
+		<property name="personCity" value="California"></property>
+	</bean>
+	
+	<!-- ApplicationContextAware Bean -->
+	<bean id="applicationAware" class="com.stackroute.aware_interface_demo.AppContextAware">
+	</bean>
+	
+	<!-- BeanFactoryAware Bean -->
+	<bean id="beanFact" class="com.stackroute.aware_interface_demo.BeanFctryAware">
+	</bean>
+	
+</beans>
